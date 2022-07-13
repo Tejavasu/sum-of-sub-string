@@ -1,0 +1,14 @@
+lass vasu:
+  def sub(self,nums,k):
+        c=0
+        pf=0
+        d={0:1}
+        for t in nums:
+            pf=pf+t
+            if pf-k in d:
+                c=c+d[pf-k]
+            if pf not in d:
+                d[pf]=1
+            else:
+                d[pf]+=1
+        return c
